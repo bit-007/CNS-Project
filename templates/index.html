@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Safety Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background/Malware_Glossary_Header.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a GIF to Check Its Safety</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="gif_file" accept=".gif" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div class="footer">
+            <p>Powered by Flask &amp; Python</p>
+        </div>
+    </div>
+</body>
+</html>
